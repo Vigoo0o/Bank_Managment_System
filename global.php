@@ -1,4 +1,5 @@
 <?php
 
-  $clientDB = "/opt/lampp/htdocs/Bank-Managment-System/db/client.txt";
-  $userDB = "/opt/lampp/htdocs/Bank-Managment-System/db/user.txt";
+$clientDB = "C:/xampp/htdocs/Bank_Managment_System/db/client.txt";
+$userDB = "C:/xampp/htdocs/Bank_Managment_System/db/user.txt";
+

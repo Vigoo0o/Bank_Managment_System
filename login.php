@@ -1,3 +1,13 @@
+<?php
+    include "functions.php";
+
+    session_start();
+
+    checkOperationStatus();
+
+    operationDefault();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +97,6 @@
     </style>
 </head>
 <body>
-
     <div class="login-container">
         <h2>Login</h2>
         <form action="handlers/loginHandler.php" method="POST">
@@ -101,7 +110,15 @@
             </div>
             <button type="submit" class="login-btn">Login</button>
         </form>
+    </div>  
+<!-- Failure Modal -->
+    <div id="failureModal" class="modal">
+        <div class="modal-content failure">
+        <span class="close" onclick="closeFailureModal()">&times;</span>
+        <h2>Failure!</h2>
+        <p>The Account Is Not Exist, Contact With Your Manager.</p>
+        </div>
     </div>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

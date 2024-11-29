@@ -1,8 +1,4 @@
 <?php
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-
   include "../functions.php";
   include "../global.php";
 
@@ -15,8 +11,8 @@
       $_POST["fname"], $_POST["lname"], $_POST["age"],
       $_POST["address"], $_POST["phone"], $_POST["accountBalance"]);
 
-      operationTrue("../updateClient.php");
+      operationTrue("../client/updateClient.php");
     } else {
-      operationFalse("../updateClient.php");
+      operationFalse("../client/updateClient.php");
     }
   }

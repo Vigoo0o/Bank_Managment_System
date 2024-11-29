@@ -10,8 +10,8 @@
 
     if(isClientExist($accNumber, $clientDB)) {
       deleteClient($accNumber, $clientDB);
-      operationTrue("../deleteClient.php");
+      operationTrue("../client/deleteClient.php");
     } else {
-      operationFalse("../deleteClient.php");
+      operationFalse("../client/deleteClient.php");
     }
   }

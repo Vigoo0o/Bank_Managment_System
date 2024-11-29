@@ -1,13 +1,17 @@
 <?php
-  include "../functions.php";
+include "../functions.php";
+include "../global.php";
 
+session_start();
 
-  if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // echo $_POST['username'] . " --> " . encryption($_POST['username']) . '<br>';
-    // echo $_POST['password'] . " --> " . encryption($_POST['password']) . '<br>';
-
-    // echo $_POST['username'] . " --> " . dencryption(encryption($_POST['username'])) . '<br>';
-    // echo $_POST['password'] . " --> " . dencryption(encryption($_POST['password'])) . '<br>';
-
-    
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $currUser;
+  if (isUserExist($_POST['username'], $userDB, $_POST['password'], $currUser)) {
+    $_SESSION['login'] = 'true';
+    $_SESSION['username'] = $currUser->getUsername();
+    $_SESSION['perrCode'] = $currUser->getPermission();
+    operationTrue('../index.php');
+  } else {
+    operationFalse('../login.php');
   }
+}

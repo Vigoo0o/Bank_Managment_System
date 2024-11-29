@@ -1,5 +1,5 @@
 <?php
-  include "functions.php";
+  include "../functions.php";
 
   session_start();
   
@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="../style/main.css">
   </head>
   <body>
     <div class="container">
@@ -27,7 +27,8 @@
       </header>
       <nav>
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../clientManagment.php">Welcome Page</a></li>
           <li><a href="addClient.php">Add Client</a></li>
           <li><a class="active" href="deleteClient.php">Delete Client</a></li>
           <li><a href="searchClient.php">Search On Client</a></li>
@@ -37,7 +38,7 @@
       </nav>
       <main>
         <h2>Delete Client</h2>
-        <form action="handlers/deleteClientHandler.php" method="POST">
+        <form action="../handlers/deleteClientHandler.php" method="POST">
           <label for="AccNumber">Client Account Number:</label>
           <input type="text" id="AccNumber" name="accNumber" required>
 
@@ -66,6 +67,6 @@
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

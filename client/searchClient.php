@@ -1,9 +1,3 @@
-<?php
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="../style/main.css">
     <style>
     .result {
       margin-top: 20px;
@@ -49,7 +43,8 @@
       </header>
       <nav>
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../clientManagment.php">Welcome Page</a></li>
           <li><a href="addClient.php">Add Client</a></li>
           <li><a href="deleteClient.php">Delete Client</a></li>
           <li><a class="active" href="searchClient.php">Search On Client</a></li>
@@ -67,9 +62,9 @@
         </form>
         <div class="result">
         <?php
-          include "functions.php";
+          include "../functions.php";
           // include "classes/clsBankClient.php";
-          include "global.php";
+          include "../global.php";
 
           if(isset($_POST['search_query'])) {
             $arr = loadDataFromDBToArray($clientDB);
